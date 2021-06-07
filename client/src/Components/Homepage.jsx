@@ -44,13 +44,13 @@ const Homepage = () => {
   const user = JSON.parse(localStorage.getItem("profile"));
   if (user) {
     switch (user.userType) {
-      case "admin":
+      case "Admin":
         history.push("/admin");
         break;
       case "Customer":
         history.push("/items");
         break;
-      default:
+      case "Delivery":
         history.push("/active");
     }
   }
